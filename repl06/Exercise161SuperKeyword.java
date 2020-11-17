@@ -26,7 +26,25 @@ Create and object of Child class. pass city name as "Fairfax" and call the displ
 Output.
 City name Fairfax
      */
-    class Parent{
+    static class Parent{
+        String city;
+        Parent(String city) {
 
+            this.city=city;
+        }
+        public void display(){
+
+            System.out.println("City name "+city);
+        }}
+    static class Child extends Parent{
+        Child(String city){
+
+            super(city);
+        }
     }
-}
+        public static void main(String[]args){
+
+            Child c= new Child("Fairfax");
+            c.display();
+    }
+}//////////////////////////////////done////////////////////////////////
