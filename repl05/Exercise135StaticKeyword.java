@@ -14,19 +14,26 @@ Expected Output:
     static class Main {
         public static void main(String[] args) {
             int[][] a = {
-                    {1,2,3,4},
-                    {4,5,6,7},
-                    {1,3,5,7}
+                    {1, 2, 3, 4},
+                    {4, 5, 6, 7},
+                    {1, 3, 5, 7}
             };
-            reduce10(a);
+            int[][] newArray = reduce10(a);
             //print the elements from new array
-            System.out.println();
+            for (int[] array : newArray) {
+                for (int num : array) {
+                    System.out.print(num + " ");
+                }
+                System.out.println();
+            }
         }
-
-        private static void reduce10(int[][] a) {
+        static int[][] reduce10(int[][] nums) {
+            for (int i = 0; i < nums.length; i++) {
+                for (int j = 0; j < nums[i].length; j++) {
+                    nums[i][j] = nums[i][j] - 10;
+                }
+            }
+            return nums;
         }
-
-
-        //create method reduce10 here
     }
 }
