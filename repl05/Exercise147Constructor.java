@@ -31,12 +31,32 @@ Eggs 3.0 Produce true 10
 Paper Towels 2.0 misc false 24
 Paper Towels 2.0 null false 0
      */
-    class storeProduct{
+    static class StoreProduct {
         String label;
         double price;
         String category;
         String hasExpiration;
         int stock;
 
+        StoreProduct(String label, double price, String category, String hasExpiration, int stock) {
+
+            System.out.println(label + " " + price + " " + category + " " + hasExpiration + " " + stock);
+        }
+
+        StoreProduct(String label, double price, int stock) {
+
+            System.out.println(label + " " + price + " " + category + " " +hasExpiration + " " + stock);
+        }
+
+        void StoreProduct(String label, double price) {
+
+            System.out.println(label + " " + price + " " + category + " " + hasExpiration + " " + stock);
+        }
+
+        public static void main(String[] args) {
+            StoreProduct obj1 = new StoreProduct("Eggs", 3.0, "Produce", "true", 10);
+            StoreProduct obj2 = new StoreProduct("Paper Towels", 2.0, "misc", "false", 24);
+            StoreProduct obj3 = new StoreProduct("Paper Towels", 2.0, "null", "false", 0);
+        }
     }
 }

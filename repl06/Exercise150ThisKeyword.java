@@ -21,27 +21,26 @@ BMW 2019 Stock Value 652980.0
 
 Assignment Goal. Clean Code, This Keyword, Method Creation, Mathematic Operations.
      */
-    static class CarObject{
+    static class CarObject {
 
         String model;
         double price;
         String quantity;
 
-        CarObject(String model,double price,String quantity) {
+        CarObject(String model, String quantity, double price) {
             this.model = model;
             this.price = price;
-            this.quantity =quantity;
+            this.quantity = quantity;
         }
-        CarObject(String model, String stockValue, double price) {
+
+        void display() {
+            System.out.println(model + " " + quantity + " " + price);
         }
-        void display(){
-            System.out.println(model+" "+quantity+" "+price);
+
+        public static void main(String[] args) {
+            CarObject car1 = new CarObject("Toyota 2019", "", 2500000.0);
+            CarObject car2 = new CarObject("BMW 2019", "", 652980.0);
+            car1.display();
+            car2.display();
         }
-    }
-    public static void main(String[] args) {
-        CarObject car1=new CarObject("Toyota 2019","",2500000.0);
-        CarObject car2=new CarObject("BMW 2019","",652980.0);
-        car1.display();
-        car2.display();
-    }
-}
+    }}

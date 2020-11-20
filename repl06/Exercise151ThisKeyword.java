@@ -31,6 +31,13 @@ This Keyword, Method Creation, Mathematic Operations, method return types.  meth
         String item;
         double price;
         int quantity;
+
+        void Main(String item,double price,int quantity){
+
+            this.item = item;
+            this.price = price;
+            this.quantity = quantity;
+        }
         void ShoppingStore (String item, double price, int quantity){
 
             System.out.println(item+" Total Value "+price);
