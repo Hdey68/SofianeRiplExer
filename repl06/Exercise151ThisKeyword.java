@@ -27,17 +27,12 @@ You purchased 539.16 Today
 Assignment Goals: Clean Code, proper naming convention, Choosing Variable Datatype,
 This Keyword, Method Creation, Mathematic Operations, method return types.  method return types.
      */
-    static class Main {
+    static class ShoppingStore {
         String item;
         double price;
         int quantity;
 
-        void Main(String item,double price,int quantity){
 
-            this.item = item;
-            this.price = price;
-            this.quantity = quantity;
-        }
         void ShoppingStore (String item, double price, int quantity){
 
             System.out.println(item+" Total Value "+price);
@@ -46,17 +41,19 @@ This Keyword, Method Creation, Mathematic Operations, method return types.  meth
             this.quantity=quantity;
         }
         public static double itemTotalPrice(double price,double price1) {
+
             return price + price1;
         }
 
         public static void main(String[] args) {
-            Main blanket =new Main();
+            ShoppingStore blanket =new ShoppingStore();
             blanket.ShoppingStore("Blanket",99.98 ,1);
 
-            Main mattress =new Main();
+            ShoppingStore mattress =new ShoppingStore();
             mattress.ShoppingStore("Mattress",439.18,1);
 
-            Main purchase= new Main() ;
+            ShoppingStore purchase= new ShoppingStore();
+
             System.out.println("You purchased "+itemTotalPrice(blanket.price, mattress.price)+" Today");
         }}
 }

@@ -38,9 +38,10 @@ Assignment Goal. Clean Code, This Keyword, Method Creation, Mathematic Operation
         }
 
         public static void main(String[] args) {
-            CarObject car1 = new CarObject("Toyota 2019", "", 2500000.0);
-            CarObject car2 = new CarObject("BMW 2019", "", 652980.0);
+            CarObject car1 = new CarObject("Toyota 2019", "Stock Value", 2500000.0);
+            CarObject car2 = new CarObject("BMW 2019", "Stock Value", 652980.0);
             car1.display();
             car2.display();
         }
-    }}
+    }
+}
