@@ -16,31 +16,45 @@ public class Exercise175AbstractClass {
   For Lemon Tea we need 2 spoons of sugar
   For Chai Tea we need 1 spoon of sugar
      */
-    public static class Tea {
+   /* static class Tea{
         String teaType;
-        Tea() {
+        Tea(String teaType) {
+            this.teaType=teaType;
         }
-        public void addSugar ( ) {
+       public void addSugar ( ) {
         }
-         static class LemonTea extends Tea {
-            @Override
-            public void addSugar ( ) {
-                System.out.println("For Lemon Tea we need 2 spoons of sugar");
-                super.addSugar();
-            }
-        }
+          static class LemonTea extends Tea {
+              LemonTea (String teaType) {
+                  super ( teaType );
+              }
+
+              public LemonTea ( ) {
+                 super ( );
+              }
+
+             @Override
+           public void addSugar ( ) {
+               System.out.println("For Lemon Tea we need 2 spoons of sugar");
+               super.addSugar ();
+           }
+       }
          static class ChaiTea extends Tea {
-            @Override
-            public void addSugar ( ) {
-                System.out.println ( "For Chai Tea we need 2 spoons of sugar" );
+             ChaiTea (String teaType) {
+                  super ( teaType );
+              }
+
+              @Override
+           public void addSugar ( ) {
+                System.out.println ( "For Chai Tea we need 1 spoon of sugar" );
                 super.addSugar ( );
             }
         }
         public static void main(String[] args) {
             Tea tea = new LemonTea();
-            tea.addSugar();
+            tea.addSugar ();
             Tea tea1 = new ChaiTea();
-            tea1.addSugar();
+           tea1.addSugar ();
         }
     }
+*/
 }
